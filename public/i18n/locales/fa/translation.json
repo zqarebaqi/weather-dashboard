@@ -2,5 +2,7 @@
   "login": "ورود",
   "enter_name": "نام خود را وارد کنید",
   "submit": "ارسال",
-  "please_enter_name": "لطفا نام را وارد کنید"
+  "please_enter_name": "لطفا نام را وارد کنید",
+  "language":"زبان"
+  
 }

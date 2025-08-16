@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import {
   IconButton,
   Menu,
@@ -20,7 +20,7 @@ export default function SettingsMenu() {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const { mode, setMode, language, setLanguage } = useContext(AppContext);
-  const { setCity, setWeatherData } = useWeather();
+  const { setCity } = useWeather();
   const { t } = useTranslation();
 
   const navigate = useNavigate();
@@ -38,18 +38,31 @@ export default function SettingsMenu() {
     setMode("light");
     setLanguage("en");
     setCity("");
-    setWeatherData(null);
     setAnchorEl(null);
     navigate("/login", { replace: true });
   };
 
-  const handleModeChange = (event, newMode) => {
-    if (newMode) setMode(newMode);
-  };
+  // const handleModeChange = (event, newMode) => {
+  //   if (newMode) setMode(newMode);
+  // };
 
-  const handleLanguageChange = (event, newLang) => {
-    if (newLang) setLanguage(newLang);
-  };
+  // const handleLanguageChange = (event, newLang) => {
+  //   if (newLang) setLanguage(newLang);
+  // };
+
+const handleModeChange = (
+  _event: React.MouseEvent<HTMLElement>,
+  newMode: "light" | "dark" | null
+) => {
+  if (newMode) setMode(newMode);
+};
+
+const handleLanguageChange = (
+  _event: React.MouseEvent<HTMLElement>,
+  newLang: "fa" | "en" | null
+) => {
+  if (newLang) setLanguage(newLang);
+};
 
   return (
     <div>

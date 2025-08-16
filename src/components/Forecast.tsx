@@ -8,8 +8,8 @@ const Forecast: React.FC = () => {
   if (!forecastData) return null;
 
   return (
-    <Box sx={{ mt: 2 , mx:10 ,mb:2}}>
-      <Paper elevation={3} p={2} sx={{ display: "inline-block" }}>
+    <Box sx={{ mt: 2, mx: 10, mb: 2 }}>
+      <Paper elevation={3} sx={{ display: "inline-block" }}>
         <Grid
           container
           spacing={2}

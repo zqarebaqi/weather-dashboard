@@ -1,5 +1,5 @@
 import CurrentWeather from "./CurrentWeather";
-import Forecast from "./ForeCast";
+import Forecast from "./Forecast";
 
 const Main: React.FC = () => {
   return (

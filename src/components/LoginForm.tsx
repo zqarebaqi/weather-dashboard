@@ -15,8 +15,8 @@ const LoginForm: React.FC = () => {
       alert(t("please_enter_name"));
       return;
     }
-    localStorage.setItem("userName", name);
     navigate("/dashboard");
+    localStorage.setItem("userName", name);
   };
 
   return (

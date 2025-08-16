@@ -3,6 +3,15 @@
   "enter_name": "نام خود را وارد کنید",
   "submit": "ارسال",
   "please_enter_name": "لطفا نام را وارد کنید",
-  "language":"زبان"
-  
+  "language": "زبان",
+  "exit": "خروج",
+  "weather_dashboard": "داشبورد هواشناسی",
+  "search": "جستجو",
+  "search_your_location": "مکان خود را جستجو کنید",
+  "mode": "حالت",
+  "light": "روشن",
+  "dark": "تیره",
+  "copyright":"تمامی حقوق این سایت متعلق به شرکت مهندسی نادین صدر آریا می‌باشد",
+  "contact_us":"تماس با ما"
+
 }

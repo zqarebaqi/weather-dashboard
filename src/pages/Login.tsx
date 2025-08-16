@@ -3,16 +3,16 @@ import LoginForm from "../components/LoginForm";
 import LoginImage from "../components/LoginImage";
 import LanguageSelect from "../components/LanguageSelect";
 
+
 const Login: React.FC = () => {
   return (
     <Grid
       container
-      direction="column"   
+      direction="column"
       justifyContent="center"
       alignItems="center"
-      sx={{ minHeight: "100vh", bgcolor: "#F3FAFE" }}>
-      
-      
+      sx={{ minHeight: "100vh" }}
+    >
       <Grid
         container
         item
@@ -22,7 +22,7 @@ const Login: React.FC = () => {
           borderRadius: 3,
           overflow: "hidden",
           boxShadow: 4,
-          mb: 3,  
+          mb: 3,
         }}
       >
         <Grid
@@ -57,14 +57,9 @@ const Login: React.FC = () => {
         </Grid>
       </Grid>
 
-      
-
       <Grid item xs={10} md={8}>
-        <LanguageSelect />
+        <LanguageSelect  />
       </Grid>
-
-
-
     </Grid>
   );
 };

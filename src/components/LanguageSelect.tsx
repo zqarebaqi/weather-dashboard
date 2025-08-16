@@ -4,14 +4,14 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { useTranslation } from "react-i18next";
+import { AppContext } from "../context/AppContext";
 
 const LanguageSelect: React.FC = () => {
-  const [language, setLanguage] = React.useState<string>("en");
-
+  const { language, setLanguage } = React.useContext(AppContext);
   const { t } = useTranslation();
 
   const handleChange = (event: any) => {
-    setLanguage(event.target.value);
+    setLanguage(event.target.value as "en" | "fa");
   };
 
   return (

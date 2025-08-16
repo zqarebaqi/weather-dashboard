@@ -3,5 +3,14 @@
   "enter_name": "Enter your name",
   "submit": "Submit",
   "please_enter_name": "Please enter your name",
-  "language": "Language"
+  "language": "Language",
+  "exit": "Exit",
+  "weather_dashboard": " Weather Dashboard",
+  "search": "Search",
+  "search_your_location": "Search Your Location",
+  "mode": "Mode",
+  "light": "Light",
+  "dark": "Dark",
+  "copyright":"All rights of this site are reserved for Nadin Sadr Aria Engineering Company.",
+  "contact_us":"contact us"
 }

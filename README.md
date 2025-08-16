@@ -1,86 +1,47 @@
-# React + TypeScript + Vite
+# Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Weather Dashboard built with React and TypeScript, using Vite as the build tool and pnpm for package management. The project uses Material UI for light/dark themes and react-i18next for language support (English and Persian).
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
-
-# Weather Dashboard (React + TypeScript + MUI)
-
-## Setup
-
-1. Clone repo
-2. `npm install`
-3. Create `.env` with `VITE_OPENWEATHER_KEY=your_key`
-4. `npm run dev`
+---
 
 ## Features
 
-- Login/Logout (username)
-- Fetch weather via OpenWeather + Axios
-- i18n: English / Persian (react-i18next)
-- Light/Dark theme with Material UI
-- Responsive layout
+- User Login/Logout
+- Fetch weather data using OpenWeather API and Axios
+- Multi-language support via i18n (English / Persian)
+- Light and Dark themes with Material UI
+- Theme mode management (light/dark) using MUI Theme
+- Persistent user settings in localStorage (language, theme, selected city)
+
+---
+
+## Tech Stack
+
+- React + TypeScript
+- Vite for fast development and HMR
+- pnpm for package management
+- Material UI (MUI) for UI components and theming
+- Axios for HTTP requests
+- react-i18next for internationalization
+- OpenWeather API for weather data
+
+---
+
+
+
+## Installation
+
+1. Clone the repository:
+
+ <!-- ```bash  -->
+
+git clone <your-repo-url>
+cd <repo-folder>
+
+
+2. Install dependencies:
+pnpm install
+
+3. Start development server:
+pnpm run dev
+

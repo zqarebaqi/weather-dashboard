@@ -17,15 +17,14 @@ import { useWeather } from "../context/WeatherContext";
 import { useTranslation } from "react-i18next";
 
 export default function SettingsMenu() {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const { mode, setMode, language, setLanguage } = useContext(AppContext);
   const { setCity } = useWeather();
   const { t } = useTranslation();
-
   const navigate = useNavigate();
 
-  const handleClick = (event) => {
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -42,6 +41,20 @@ export default function SettingsMenu() {
     navigate("/login", { replace: true });
   };
 
+  const handleModeChange = (
+    _event: React.MouseEvent<HTMLElement>,
+    newMode: "light" | "dark" | null
+  ) => {
+    if (newMode) setMode(newMode);
+  };
+
+  const handleLanguageChange = (
+    _event: React.MouseEvent<HTMLElement>,
+    newLang: "fa" | "en" | null
+  ) => {
+    if (newLang) setLanguage(newLang);
+  };
+
   // const handleModeChange = (event, newMode) => {
   //   if (newMode) setMode(newMode);
   // };
@@ -50,32 +63,17 @@ export default function SettingsMenu() {
   //   if (newLang) setLanguage(newLang);
   // };
 
-const handleModeChange = (
-  _event: React.MouseEvent<HTMLElement>,
-  newMode: "light" | "dark" | null
-) => {
-  if (newMode) setMode(newMode);
-};
-
-const handleLanguageChange = (
-  _event: React.MouseEvent<HTMLElement>,
-  newLang: "fa" | "en" | null
-) => {
-  if (newLang) setLanguage(newLang);
-};
-
   return (
     <div>
       <IconButton onClick={handleClick}>
         <SettingsIcon color="primary" />
       </IconButton>
+
       <Menu
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
         onClose={handleClose}
-        PaperProps={{
-          sx: { p: 1, minWidth: 200 },
-        }}
+        PaperProps={{ sx: { p: 1, minWidth: 200 } }}
       >
         <Box sx={{ px: 1, mb: 1 }}>
           <Box sx={{ fontSize: 14, mb: 0.5 }}>{t("mode")}</Box>

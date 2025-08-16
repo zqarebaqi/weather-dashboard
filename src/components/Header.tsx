@@ -13,18 +13,11 @@ import SettingsMenu from "./SettingsMenu";
 import { useWeather } from "../context/WeatherContext";
 import { useTranslation } from "react-i18next";
 
-interface HeaderProps {
-  onLocationChange: (location: string) => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ onLocationChange }) => {
-  const theme = useTheme();
-
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
-  const { setCity } = useWeather();
-
+const Header: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>("");
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const { setCity } = useWeather();
   const { t } = useTranslation();
 
   const handleSearch = () => {

@@ -22,7 +22,7 @@ const Forecast: React.FC = () => {
               <Card>
                 <CardContent sx={{ textAlign: "center" }}>
                   <Typography variant="subtitle1">
-                    {day.date.toLocaleDateString("En", { weekday: "long" })}
+                    {day.date.toLocaleDateString("en-US", { weekday: "long" })}
                   </Typography>
                   <img src={day.icon} alt={day.description} />
                   <Typography variant="h6">

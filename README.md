@@ -35,8 +35,8 @@ A Weather Dashboard built with React and TypeScript, using Vite as the build too
 
  <!-- ```bash  -->
 
-git clone <your-repo-url>
-cd <repo-folder>
+git clone : https://github.com/zqarebaqi/weather-dashboard.git
+
 
 
 2. Install dependencies:

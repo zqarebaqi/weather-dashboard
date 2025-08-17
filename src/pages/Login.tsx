@@ -1,8 +1,7 @@
-import { Grid } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import LoginForm from "../components/LoginForm";
 import LoginImage from "../components/LoginImage";
 import LanguageSelect from "../components/LanguageSelect";
-
 
 const Login: React.FC = () => {
   return (
@@ -11,22 +10,19 @@ const Login: React.FC = () => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      sx={{ minHeight: "100vh" }}
+      sx={{ minHeight: "100vh", gap: 3 }}
     >
       <Grid
-        container
-        item
         xs={10}
         md={8}
         sx={{
           borderRadius: 3,
           overflow: "hidden",
           boxShadow: 4,
-          mb: 3,
+          display: "flex",
         }}
       >
         <Grid
-          item
           xs={12}
           md={6}
           sx={{
@@ -39,9 +35,7 @@ const Login: React.FC = () => {
         >
           <LoginForm />
         </Grid>
-
         <Grid
-          item
           xs={12}
           md={6}
           sx={{
@@ -57,8 +51,8 @@ const Login: React.FC = () => {
         </Grid>
       </Grid>
 
-      <Grid item xs={10} md={8}>
-        <LanguageSelect  />
+      <Grid xs={10} md={8}>
+        <LanguageSelect />
       </Grid>
     </Grid>
   );
